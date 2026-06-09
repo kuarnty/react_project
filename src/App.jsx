@@ -72,7 +72,10 @@ function App() {
   const handleSaveExample = async () => {
     if (!exampleName) return alert('Enter a name');
     const res = await saveExample({ name: exampleName, type: exampleType, matrix });
-    if (res && res.error) return alert('Save failed: ' + res.error.message);
+    if (res && res.error) {
+      const message = res.error.message || res.error || 'Unknown error';
+      return alert('Save failed: ' + message);
+    }
     setExampleName('');
     refreshExamples();
   };
