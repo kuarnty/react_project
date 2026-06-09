@@ -3,6 +3,8 @@
     "@supabase/supabase-js": "^2.108.0",
     "cytoscape": "^3.34.0",
     "katex": "^0.17.0",
+    "mathjs": "^15.2.0",
+    "ml-matrix": "^6.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zustand": "^5.0.14"
