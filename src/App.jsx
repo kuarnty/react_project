@@ -2,6 +2,7 @@
 import React from 'react';
 import { useMathStore } from './store/useMathStore';
 import { calculateDeterminant, calculateTrace, calculateEigenvalues } from './utils/matrixOps';
+import GraphViewer from './components/GraphViewer';
 
 function App() {
   const { matrix, setMatrixCell, setMatrix } = useMathStore();
@@ -99,6 +100,14 @@ function App() {
               {eigenvalues}
             </div>
           </div>
+        </div>
+
+        {/* 3. Graph Visualization */}
+        <div className="mt-8">
+            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">
+              Adjacency Matrix Graph Visualization
+            </h2>
+            <GraphViewer />
         </div>
 
       </div>
